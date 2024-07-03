@@ -27,13 +27,17 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.2
         with:
           node-version: 20
       - name: installReque
         run: npm i
+      - name: lint
+        run: npm run lint
+      - name: npm check
+        run: npm run check
       - name: build
         run: npm run build
       - name: Upload artifact
@@ -42,4 +46,3 @@ jobs:
           path: dist
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4.0.5
-      

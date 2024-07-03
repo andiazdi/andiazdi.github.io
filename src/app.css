@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background: hsl(var(--background));
+    font-family: 'Open Sans', sans-serif;
+    color: #e2e2e2;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .project-item {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    .about ul, .about {
+        display: block;
+    }
+
+    .text-field {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .about img {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .about {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .projects {
+        margin-top: 10px;
+    }
+
+    header {
+        justify-content: space-evenly;
+    }
+
+    header h1 {
+        padding: 5px;
+        font-size: 20px;
+        display: inline-block;
+    }
+
+    header nav li {
+        margin: 10px 0 10px 10px;
+    }
+    header nav li:nth-child(1) {
+        margin-left: 0;
+    }
+
+    .text-field {
+        padding: 10px 15px;
+    }
+}
