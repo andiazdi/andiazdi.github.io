@@ -32,11 +32,11 @@ jobs:
       - name: check
         run: pnpm run check
 
-      - name: building project
+      - name: build
         run: pnpm run build
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.2.0
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          branch: gh-pages
-          folder: build
+          path: build
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4.0.5
