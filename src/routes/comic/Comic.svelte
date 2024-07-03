@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
     import moment from 'moment';
 
-    interface ComicResponse {
+    type ComicResponse = {
         month: string;
         num: number;
         link: string;

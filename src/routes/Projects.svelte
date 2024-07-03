@@ -1,11 +1,11 @@
 <script lang="ts">
-    interface Project {
+    type Project = {
         title: string;
         description: string;
         url: string;
     }
 
-    let projects: Project[] = [
+    const projects: Project[] = [
         {
             title: "GameClub",
             description: "Telegram bot for the Innopolis game club with booking, admin panel for setting all parameters. Self-made project.",
