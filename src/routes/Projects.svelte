@@ -16,7 +16,20 @@
             description: "System of smart home has server-side and client-side parts. Server is MQTT server for getting new messages from devices and sending them to db. Devices is an arduino with some sensors (Temperature, lightcontrole, etc.). They send their readings to the server. Client is a Telegram bot, which send information about devices and their readings to user. Self-made project.",
             url: "https://github.com/andiazdi/SmartHomeSystem"
         },
-        // Add other projects here...
+        {
+            title: "ShopBot",
+            description: "Telegram bot for sellers to make sales in a Telegram interface. Consists of the Admin panel and the bot itself. AdminPanel allows to manage products. Self-made project",
+            url: "https://github.com/andiazdi/ShopBot"
+        },        {
+            title: "MusaDzhalilTheatreBot",
+            description: "Telegram bot for MusaDzhalilTheatre made on the hackathon. Contains payments, parsing MusaDzhalilTheatre site to get new information (ex. news, tickets, etc.). Self-made project.",
+            url: "https://github.com/andiazdi/MusaDzhalilTheatreBot"
+        },
+        {
+            title: "DarkProject",
+            description: "Telegrm Bot for InnoCTF competition with pre-designed SQLinjection vulnerability. Self-made project.",
+            url: "https://github.com/andiazdi/DarkProject"
+        }
     ];
 </script>
 
