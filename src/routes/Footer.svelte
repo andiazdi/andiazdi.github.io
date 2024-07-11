@@ -16,12 +16,19 @@
 
 <style>
     footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        /*height: 60px;*/
         background: #009B77;
         color: #fff;
-        position: absolute;
+        padding: 10px 0;
+        text-align: center;
         bottom: 0;
         width: 100%;
-        height: 2.5rem;
     }
 
     footer h2 {
@@ -37,6 +44,5 @@
         width: 30px;
         height: 30px;
     }
-
 
 </style>

@@ -2,7 +2,7 @@
 	"name": "frontendproject",
 	"version": "0.0.1",
 	"private": true,
-	"scripts": { 
+	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
@@ -27,6 +27,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-cloudflare": "^4.6.1",
 		"@sveltejs/adapter-static": "^3.0.2"
 	}
 }
