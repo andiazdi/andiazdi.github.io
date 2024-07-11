@@ -2,6 +2,8 @@ import moment from 'moment';
 import type {ComicResponse} from './types';
 
 
+export const csr = false
+
 export async function load() {
     let comic: ComicResponse | null = null;
 
