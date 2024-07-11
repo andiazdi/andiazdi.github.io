@@ -1,56 +1,32 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
-    import moment from 'moment';
+    import type {ComicResponse} from './types';
 
-    type ComicResponse = {
-        month: string;
-        num: number;
-        link: string;
-        year: string;
-        news: string;
-        safe_title: string;
-        transcript: string;
-        alt: string;
-        img: string;
-        title: string;
-        day: string;
-    }
-
-    let comic: ComicResponse | null = null;
-    let error: string | null = null;
-
-    async function fetchComic() {
-        try {
-            const email = 'al.andukov@innopolis.university';
-            const response = await fetch(`https://fwd.innopolis.university/api/hw2?email=${email}`);
-            const id = await response.json();
-            const comicResponse = await fetch(`https://fwd.innopolis.university/api/comic?id=${id}`);
-            comic = await comicResponse.json();
-        } catch (err) {
-            error = (err as Error).message;
-        }
-    }
-
-    onMount(fetchComic);
+    export let comic: ComicResponse | null = null;
+    export let error: string | null = null;
 </script>
 
-<div class="comic-component">
-    {#if error}
-        <div class="error">{error}</div>
-    {:else}
-        {#if comic}
-            <img id="comic-image" src={comic.img} alt={comic.alt}>
-            <hr />
-            <div id="comic-items">
-                <h2 id="comic-title">{comic.safe_title}</h2>
-                <p id="comic-date">{moment(new Date(parseInt(comic.year), parseInt(comic.month) - 1, parseInt(comic.day))).fromNow()}</p>
-            </div>
+{#if error}
+    <p>Error: {error}</p>
+{:else if comic}
+    <div class="comic-component">
+        {#if error}
+            <div class="error">{error}</div>
         {:else}
-            <img id="comic-image" src="loading.gif" alt="Loading...">
+            {#if comic}
+                <img id="comic-image" src={comic.img} alt={comic.alt}>
+                <hr/>
+                <div id="comic-items">
+                    <h2 id="comic-title">{comic.safe_title}</h2>
+                    <p id="comic-date">{comic.date}</p>
+                </div>
+            {:else}
+                <img id="comic-image" src="loading.gif" alt="Loading...">
+            {/if}
         {/if}
-    {/if}
-</div>
-
+    </div>
+{:else}
+    <p>Loading...</p>
+{/if}
 
 <style>
     .comic-component {
